@@ -26,7 +26,7 @@
 * [第四章 Apache Flink SQL API](di-si-zhang-apache-flink-sql-api.md)
   * [4.1 SQL的发展及应用](di-si-zhang-apache-flink-sql-api/41-sqlde-fa-zhan-ji-ying-yong.md)
   * [4.2 Apache Flink SQL 数据类型](di-si-zhang-apache-flink-sql-api/42-apache-flink-sql-shu-ju-lei-xing.md)
-  * 4.3 Apache Flink SQL Connector
+  * [4.3 Apache Flink SQL Connector](di-si-zhang-apache-flink-sql-api/43-apache-flink-sql-connector.md)
   * 4.4 Apache Flink SQL 算子语义
   * 4.5 Apache Flink SQL 算子实现原理
   * 4.6 Apache Flink SQL 典型优化规则
