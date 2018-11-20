@@ -42,7 +42,7 @@
   * 6.1 Apache Flink DataStream API 与SQL/TableAPI的区别
   * [6.2 Apache Flink DataStream ProcessFunction](di-liu-zhang-apache-flink-datastream-api/62-apache-flink-datastream-processfunction.md)
   * [6.3 Apache Flink DataStream Iterate](di-liu-zhang-apache-flink-datastream-api/63-apache-flink-datastream-iterate.md)
-  * 6.4 Apache Flink DataStream 综合实例
+  * [6.4 Apache Flink DataStream 综合实例](di-liu-zhang-apache-flink-datastream-api/64-apache-flink-datastream-zong-he-shi-li.md)
   * 6.5 本章小结
 * [第七章 Apache Flink DataSet API](di-qi-zhang-apache-flink-dataset-api.md)
   * 7.1 Apache Flink DataSet API与SQL/TableAPI的区别
