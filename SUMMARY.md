@@ -56,7 +56,7 @@
   * [8.4 Apache Flink CEP 综合实例](di-bazhang-apache-flink-cep/84-apache-flink-cep-zong-he-shi-li.md)
   * [8.5 本章小结](di-bazhang-apache-flink-cep/85-ben-zhang-xiao-jie.md)
 * [第九章 Apache Flink ML](di-bazhang-apache-flink-ml.md)
-  * 9.1 Apache Flink ML 简介
+  * [9.1 Apache Flink ML 简介](di-bazhang-apache-flink-ml/91-apache-flink-ml-jian-jie.md)
   * 9.2 Apache Flink ML 核心接口
   * 9.3 Apache Flink ML 核心算法
   * 9.4 Apache Flink ML on TableAPI
