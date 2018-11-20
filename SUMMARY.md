@@ -15,7 +15,7 @@
 * [第七章 Apache Flink DataSet API](di-qi-zhang-apache-flink-dataset-api.md)
 * [第八章 Apache Flink CEP](di-bazhang-apache-flink-cep.md)
 * [第九章 Apache Flink ML](di-bazhang-apache-flink-ml.md)
-* 第十章 Apache Flink Gelly
+* [第十章 Apache Flink Gelly](di-shi-zhang-apacheflink-gelly.md)
 * 第十一章 Apache Flink 在Alibaba的应用案例
 * 总结
 
