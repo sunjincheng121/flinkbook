@@ -10,7 +10,7 @@
   * [1.1 大数据与Apache Flink的渊源](di-yi-zhang-apache-flink-gai-shu/11-da-shu-ju-yu-apache-flink-de-yuan-yuan.md)
   * [1.2 Apache Flink 整体架构](di-yi-zhang-apache-flink-gai-shu/12-apache-flink-zheng-ti-jia-gou.md)
   * [1.3 Apache Flink APIs ](di-yi-zhang-apache-flink-gai-shu/13-apache-flink-apis.md)
-  * 1.4 本章小结
+  * [1.4 本章小结](di-yi-zhang-apache-flink-gai-shu/14-ben-zhang-xiao-jie.md)
 * [第二章 Apache Flink 核心概念](di-er-zhang-apache-flink-he-xin-gai-nian.md)
   * 2.1 Native Streaming
   * 2.2 Exactly Once Semantics
