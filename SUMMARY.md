@@ -52,7 +52,7 @@
 * [第八章 Apache Flink CEP](di-bazhang-apache-flink-cep.md)
   * [8.1 Apache Flink CEP 简介](di-bazhang-apache-flink-cep/81-apache-flink-cep-jian-jie.md)
   * [8.2 Apache Flink CEP 算子语义](di-bazhang-apache-flink-cep/82-apache-flink-cep-suan-zi-yu-yi.md)
-  * 8.3 Apache Flink CEP on SQL
+  * [8.3 Apache Flink CEP on SQL](di-bazhang-apache-flink-cep/83-apache-flink-cep-on-sql.md)
   * 8.4 Apache Flink CEP 综合实例
   * 8.5 本章小结
 * [第九章 Apache Flink ML](di-bazhang-apache-flink-ml.md)
