@@ -17,7 +17,7 @@
   * [2.3 Unify Batch and Streaming](di-er-zhang-apache-flink-he-xin-gai-nian/23-unify-batch-and-streaming.md)
   * [2.4 Late Event Handling](di-er-zhang-apache-flink-he-xin-gai-nian/24-late-event-handling.md)
   * [2.5 Excellent Performance](di-er-zhang-apache-flink-he-xin-gai-nian/25-excellent-performance.md)
-  * 2.6 本章小结
+  * [2.6 本章小结](di-er-zhang-apache-flink-he-xin-gai-nian/26-ben-zhang-xiao-jie.md)
 * [第三章 Apache Flink 环境搭建](di-san-zhang-apache-flink-huan-jing-da-jian.md)
   * 3.1 Apache Flink HelloWorld
   * 3.2 Apache Flink 集群部署
