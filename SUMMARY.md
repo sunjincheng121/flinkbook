@@ -32,7 +32,7 @@
   * [4.6 Apache Flink SQL 典型优化规则](di-si-zhang-apache-flink-sql-api/46-apache-flink-sql-dian-xing-you-hua-gui-ze.md)
   * [4.7 Apache Flink SQL 到 Runtime的转换](di-si-zhang-apache-flink-sql-api/47-apache-flink-sql-dao-runtime-de-zhuan-huan.md)
   * [4.8 Apache Flink SQL 综合实例](di-si-zhang-apache-flink-sql-api/48-apache-flink-sql-zong-he-shi-li.md)
-  * 4.9 本章小结
+  * [4.9 本章小结](di-si-zhang-apache-flink-sql-api/49-ben-zhang-xiao-jie.md)
 * [第五章 Apache Flink Table API](di-wu-zhang-apache-flink-table-api.md)
   * [5.1 Apache Flink TableAPI与SQL的区别](di-wu-zhang-apache-flink-table-api/51-apache-flink-tableapiyu-sql-de-qu-bie.md)
   * 5.2 Apache Flink TableAPI 对 SQL的扩展
