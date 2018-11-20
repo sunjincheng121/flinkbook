@@ -1,6 +1,6 @@
 # Summary
 
-* [封面](README.md)
+* [Flink 简明教程](README.md)
 * [推荐序](chapter1.md)
 * [前言](qian-yan.md)
 * [目录](mu-lu.md)
