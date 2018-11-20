@@ -13,7 +13,7 @@
   * [1.4 本章小结](di-yi-zhang-apache-flink-gai-shu/14-ben-zhang-xiao-jie.md)
 * [第二章 Apache Flink 核心概念](di-er-zhang-apache-flink-he-xin-gai-nian.md)
   * [2.1 Native Streaming](di-er-zhang-apache-flink-he-xin-gai-nian/21-native-streaming.md)
-  * 2.2 Exactly Once Semantics
+  * [2.2 Exactly Once Semantics](di-er-zhang-apache-flink-he-xin-gai-nian/22-exactly-once-semantics.md)
   * 2.3 Unify Batch and Streaming
   * 2.4 Late Event Handling
   * 2.5 Excellent Performance
