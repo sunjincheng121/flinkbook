@@ -10,8 +10,8 @@
 * [第二章 Apache Flink 核心概念](di-er-zhang-apache-flink-he-xin-gai-nian.md)
 * [第三章 Apache Flink 环境搭建](di-san-zhang-apache-flink-huan-jing-da-jian.md)
 * [第四章 Apache Flink SQL API](di-si-zhang-apache-flink-sql-api.md)
-* 第五章 Apache Flink Table API
-* 第六章 Apache Flink DataStream API
+* [第五章 Apache Flink Table API](di-wu-zhang-apache-flink-table-api.md)
+* [第六章 Apache Flink DataStream API](di-liu-zhang-apache-flink-datastream-api.md)
 * 第七章 Apache Flink DataSet API
 * 第八章 Apache Flink CEP
 * [第九章 Apache Flink ML](di-bazhang-apache-flink-ml.md)
