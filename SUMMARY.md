@@ -58,7 +58,7 @@
 * [第九章 Apache Flink ML](di-bazhang-apache-flink-ml.md)
   * [9.1 Apache Flink ML 简介](di-bazhang-apache-flink-ml/91-apache-flink-ml-jian-jie.md)
   * [9.2 Apache Flink ML 核心接口](di-bazhang-apache-flink-ml/92-apache-flink-ml-he-xin-jie-kou.md)
-  * 9.3 Apache Flink ML 核心算法
+  * [9.3 Apache Flink ML 核心算法](di-bazhang-apache-flink-ml/93-apache-flink-ml-he-xin-suan-fa.md)
   * 9.4 Apache Flink ML on TableAPI
   * 9.5 Apache Flink ML 综合实例
   * 9.6 本章小结
