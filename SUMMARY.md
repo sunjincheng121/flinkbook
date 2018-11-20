@@ -12,7 +12,7 @@
 * [第四章 Apache Flink SQL API](di-si-zhang-apache-flink-sql-api.md)
 * [第五章 Apache Flink Table API](di-wu-zhang-apache-flink-table-api.md)
 * [第六章 Apache Flink DataStream API](di-liu-zhang-apache-flink-datastream-api.md)
-* 第七章 Apache Flink DataSet API
+* [第七章 Apache Flink DataSet API](di-qi-zhang-apache-flink-dataset-api.md)
 * 第八章 Apache Flink CEP
 * [第九章 Apache Flink ML](di-bazhang-apache-flink-ml.md)
 * 第十章 Apache Flink Gelly
