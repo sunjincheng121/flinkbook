@@ -37,7 +37,7 @@
   * [5.1 Apache Flink TableAPI与SQL的区别](di-wu-zhang-apache-flink-table-api/51-apache-flink-tableapiyu-sql-de-qu-bie.md)
   * [5.2 Apache Flink TableAPI 对 SQL的扩展](di-wu-zhang-apache-flink-table-api/52-apache-flink-tableapi-dui-sql-de-kuo-zhan.md)
   * [5.3 Apache Flink TableAPI 综合实例](di-wu-zhang-apache-flink-table-api/53-apache-flink-tableapi-zong-he-shi-li.md)
-  * 5.4 本章小结
+  * [5.4 本章小结](di-wu-zhang-apache-flink-table-api/54-ben-zhang-xiao-jie.md)
 * [第六章 Apache Flink DataStream API](di-liu-zhang-apache-flink-datastream-api.md)
   * 6.1 Apache Flink DataStream API 与SQL/TableAPI的区别
   * 6.2 Apache Flink DataStream ProcessFunction
