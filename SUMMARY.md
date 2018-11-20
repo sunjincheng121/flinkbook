@@ -40,7 +40,7 @@
   * [5.4 本章小结](di-wu-zhang-apache-flink-table-api/54-ben-zhang-xiao-jie.md)
 * [第六章 Apache Flink DataStream API](di-liu-zhang-apache-flink-datastream-api.md)
   * 6.1 Apache Flink DataStream API 与SQL/TableAPI的区别
-  * 6.2 Apache Flink DataStream ProcessFunction
+  * [6.2 Apache Flink DataStream ProcessFunction](di-liu-zhang-apache-flink-datastream-api/62-apache-flink-datastream-processfunction.md)
   * 6.3 Apache Flink DataStream Iterate
   * 6.4 Apache Flink DataStream 综合实例
   * 6.5 本章小结
