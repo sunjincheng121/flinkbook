@@ -22,7 +22,7 @@
   * 3.1 Apache Flink HelloWorld
   * [3.2 Apache Flink 集群部署](di-san-zhang-apache-flink-huan-jing-da-jian/32-apache-flink-ji-qun-bu-shu.md)
   * [3.3 Apache Flink Interactive Client](di-san-zhang-apache-flink-huan-jing-da-jian/33-apache-flink-interactive-client.md)
-  * 3.4 本章小结
+  * [3.4 本章小结](di-san-zhang-apache-flink-huan-jing-da-jian/34-ben-zhang-xiao-jie.md)
 * [第四章 Apache Flink SQL API](di-si-zhang-apache-flink-sql-api.md)
   * 4.1 SQL的发展及应用
   * 4.2 Apache Flink SQL 数据类型
