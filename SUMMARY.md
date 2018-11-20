@@ -61,7 +61,7 @@
   * [9.3 Apache Flink ML 核心算法](di-bazhang-apache-flink-ml/93-apache-flink-ml-he-xin-suan-fa.md)
   * [9.4 Apache Flink ML on TableAPI](di-bazhang-apache-flink-ml/94-apache-flink-ml-on-tableapi.md)
   * [9.5 Apache Flink ML 综合实例](di-bazhang-apache-flink-ml/95-apache-flink-ml-zong-he-shi-li.md)
-  * 9.6 本章小结
+  * [9.6 本章小结](di-bazhang-apache-flink-ml/96-ben-zhang-xiao-jie.md)
 * [第十章 Apache Flink Gelly](di-shi-zhang-apacheflink-gelly.md)
   * 10.1 Apache Flink Gelly 简介
   * 10.2 Apache Flink Gelly 核心接口
