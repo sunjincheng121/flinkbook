@@ -65,7 +65,7 @@
 * [第十章 Apache Flink Gelly](di-shi-zhang-apacheflink-gelly.md)
   * [10.1 Apache Flink Gelly 简介](di-shi-zhang-apacheflink-gelly/101-apache-flink-gelly-jian-jie.md)
   * [10.2 Apache Flink Gelly 核心接口](di-shi-zhang-apacheflink-gelly/102-apache-flink-gelly-he-xin-jie-kou.md)
-  * 10.3 Apache Flink Gelly 核心算法
+  * [10.3 Apache Flink Gelly 核心算法](di-shi-zhang-apacheflink-gelly/103-apache-flink-gelly-he-xin-suan-fa.md)
   * 10.4 Apache Flink Gelly 综合实例
   * 10.5 本章小结
 * [第十一章 Apache Flink 在Alibaba的应用案例](di-shi-yi-zhang-apache-flink-zai-alibaba-de-ying-yong-an-li.md)
