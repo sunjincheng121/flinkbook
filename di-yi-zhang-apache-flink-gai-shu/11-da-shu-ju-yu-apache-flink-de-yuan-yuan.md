@@ -52,9 +52,40 @@
 
 # Flink 的发展历程
 
-Flink因分布式实时数据计算而产生，Flink以其优秀的纯流式计算架构很快于2014年3月成为Apache孵化器项目，2014年12月，Flink被接受为Apache顶级项目。随后社区非常活跃，Flink版本不断更新发布，截止到此刻\(2018.11.25\)社区已经发起了Flink-1.7.0的第三次后续发布版本的投票。Flink最初的项目名称是Stratosphere， Stratosphere是一个研究项目，其目标是开发下一代大数据分析平台。 Stratosphere对自己的定位和与Apache Flink的关系说明如下：![](/assets/stratosphere.png)
+Flink因分布式实时数据计算而产生，Flink以其优秀的纯流式计算架构很快于2014年3月成为Apache孵化器项目，2014年12月，Flink被接受为Apache顶级项目。随后社区非常活跃，Flink版本不断更新发布，截止到此刻\(2018.11.25\)社区已经发起了Flink-1.7.0的第三次后续发布版本的投票。Flink最初的项目名称是Stratosphere， Stratosphere是一个研究项目，其目标是开发下一代大数据分析平台。 Stratosphere对自己的定位和与Apache Flink的关系说明如下：![](/assets/stratosphere.png)![](/assets/Stratosphere2.png)
 
 接下来我们以一张鱼骨图介绍Flink的发展和发布历程：
 
+![](/assets/release.png)
+
+## Stratosphere 0.5(Flink base)
+Stratosphere 0.5是Flink的初始代码，在0.5版本已经具备了核心的runtime功能，在发布包里面已经包含了WordCount等经典示例。但是这个此时的Flink只支持java开发，但还没有Exactly-onced的核心语义，同时也没有TableAPI，CEP，ML等High-levalAPI和扩展类库。
+
+## incubating 版本
+直到Flink-0.8-incubating，Flink支持ScalaAPI，提供Window的语义，通知对文件系统进行了抽象，对Hadoop文件系统进行了支持。
+
+## Flink-0.9 
+Flink-0.9.1 是Flink的第一个发布版本，明天支持了流计算非常重要的Exactly-once语义，正式推出了High-Level的TableAPI，发布了第一个版本的Flink-ML，同时在这个版本还启动了Flink-on-Tez等生态性建设。
+
+## Flink-1.0
+Flink-1.0发布了3个版本，在这个版本比较大的增强是对Event-Time的支持和对State的管理的多支持，Event-time的支持，促使Flink可以应用在很多事件驱动的场景，能够对流上乱序事件进行完美的处理。在该版本对CEP进行了初步的支持（java），同时在这个版本还对standalone 和 YARN 集群支持了HA的解决方案，这是Flink能够正式投产的核心功能。
+
+## Flink-1.1
+Flink-1.1发布了5个版本，在这个版本上面做了大量功能优化和增强，其中第Connector进行了较大的增强，提供了对HDFS，Kinesis，Cassandra等重要外部存储产品的支持。同时这个版本对TableAPI进行重构，与Calcite进行集成，为后续查询优化打下了良好的基础。在DataStream层面提出了Session Window的语义支持。在CEP上面增加了对Scala的支持，Grelly上面也增加了很多具体算法的实现。Flink在1.1b版本也提供了对Metrics的支持。Flink-1.1这是Flink不断走向成熟和走向产品化的重要版本之一。
+
+## Flink-1.2
+Flink-1.2发布了一个版本，这个版本解决了650个issues，对Flink各个模块都做出了很多优化，其中比较核心的功能是支持DataStream上面进行扩容，也就是支持修改DataStream的job并发度的情况性可言复用State。这个功能分为keyed和non-keyed两个场景，keyed采用key-group机制，non-keyed采用operator stated管理。同时也是在这个版本提供了更灵活的low-level 接口，ProcessFunction，这接口可言支持用户灵活管理State，自定义Timer等高级功能。极大的方便了用户开发。
+
+## Flink-1.3
+Flink-1.3发布了3个版本，在这个版本中比较大的增强是关于Checkpoint的管理和TableAPI上面对window的支持。在Checkpoint方面实现了增量CP的机制，这是解决流计算进行Checkpoint时候卡顿问题的核心解决方案。同时在这个版本里面还引入了细粒度恢复机制，细粒度的恢复机制，可以对整个DAG的局部某个子图进行恢复。在TableAPI方面不但支持了Tumble，Hop，Session window，而且还对标准数据库上面的开窗OverWindow进行了全面的支持。
+
+## Flink-1.4
+Flink-1.4发布了2个版本，在这个版本上进行了900多的issues开发，其中一个比较重要的功能四在Kafka connector上面支持了End-to-end Exactly Once语义，这对Flink来说是流计算场景Exactly Once语义的完整支持。
+
+## Flink-1.5
+Flink-1.5 发布了5个版本，在这个版本上面解决了780多个issues，在资源调度上面进行重写，核心变化是这些改进增加了对YARN和Mesos调度程序上的动态资源分配和动态资源释放的支持，以实现更好的资源利用率，故障恢复以及动态扩展。同时提出了Task-Local State Recovery机制，该机制是Job发生Failovers时候，能够保证该Job状态在本地不会丢失，进行恢复时只需在本地直接恢复，不需从远程HDFS重新拉取State，进而优化了Failover的效率。同时在此版本Flink对其网络也进行了一个整体重构。
+
+## Flink-1.6
+Flink-1.6 发布了2个版本，在这个版本上面解决了360个issues。在State方面提供了对StateTTL的支持，这样可以及时清除无用的state数据，同时这个版本支持了Timer数据持久化到RocksDB，这样解决了Timer数据对内存的依赖限制。更重要的是Timer数据进行快照存储时候不会阻塞主数据流的Checkpoint。
 
 
