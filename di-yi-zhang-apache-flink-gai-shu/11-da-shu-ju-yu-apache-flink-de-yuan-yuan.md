@@ -86,6 +86,6 @@ Flink-1.4发布了2个版本，在这个版本上进行了900多的issues开发�
 Flink-1.5 发布了5个版本，在这个版本上面解决了780多个issues，在资源调度上面进行重写，核心变化是这些改进增加了对YARN和Mesos调度程序上的动态资源分配和动态资源释放的支持，以实现更好的资源利用率，故障恢复以及动态扩展。同时提出了Task-Local State Recovery机制，该机制是Job发生Failovers时候，能够保证该Job状态在本地不会丢失，进行恢复时只需在本地直接恢复，不需从远程HDFS重新拉取State，进而优化了Failover的效率。同时在此版本Flink对其网络也进行了一个整体重构。
 
 ## Flink-1.6
-Flink-1.6 发布了2个版本，在这个版本上面解决了360个issues。在State方面提供了对StateTTL的支持，这样可以及时清除无用的state数据，同时这个版本支持了Timer数据持久化到RocksDB，这样解决了Timer数据对内存的依赖限制。更重要的是Timer数据进行快照存储时候不会阻塞主数据流的Checkpoint。
+Flink-1.6 发布了2个版本，在这个版本上面解决了360个issues。在State方面提供了对StateTTL的支持，这样可以及时清除无用的state数据，同时这个版本支持了Timer数据持久化到RocksDB，这样解决了Timer数据对内存的依赖限制。更重要的是Timer数据进行快照存储时候不会阻塞主数据流的Checkpoint。在这个版本中对SQL Cliend CLI进行了大量增强，比如支持UDF，支持Batch，增加了INSERT INTO的支持等等。
 
 
