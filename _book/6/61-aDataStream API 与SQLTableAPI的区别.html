@@ -1,0 +1,1159 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.1 Apache Flink DataStream API 与SQL/TableAPI的区别 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="62-DataStream ProcessFunction.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Apache Flink 简明教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Recommend.html">
+            
+                <a href="../Recommend.html">
+            
+                    
+                    推荐序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Rreface.html">
+            
+                <a href="../Rreface.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Acknowledgement.html">
+            
+                <a href="../Acknowledgement.html">
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../AboutBook.html">
+            
+                <a href="../AboutBook.html">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    第一章 Apache Flink 概述
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../1/11-大数据与Apache Flink的渊源.html">
+            
+                <a href="../1/11-大数据与Apache Flink的渊源.html">
+            
+                    
+                    1.1 大数据与Apache Flink的渊源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../1/12-Flink 整体架构.html">
+            
+                <a href="../1/12-Flink 整体架构.html">
+            
+                    
+                    1.2 Apache Flink 整体架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../1/13-Flink APIs.html">
+            
+                <a href="../1/13-Flink APIs.html">
+            
+                    
+                    1.3 Apache Flink APIs 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../1/14-本章小结.html">
+            
+                <a href="../1/14-本章小结.html">
+            
+                    
+                    1.4 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    第二章 Apache Flink 核心概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../2/21-Native Streaming.html">
+            
+                <a href="../2/21-Native Streaming.html">
+            
+                    
+                    2.1 Native Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../2/22-Exactly Once Semantics.html">
+            
+                <a href="../2/22-Exactly Once Semantics.html">
+            
+                    
+                    2.2 Exactly Once Semantics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../2/23-Unify Batch and Streaming.html">
+            
+                <a href="../2/23-Unify Batch and Streaming.html">
+            
+                    
+                    2.3 Unify Batch and Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../2/24-Late Event Handling.html">
+            
+                <a href="../2/24-Late Event Handling.html">
+            
+                    
+                    2.4 Late Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../2/25-Excellent Performance.html">
+            
+                <a href="../2/25-Excellent Performance.html">
+            
+                    
+                    2.5 Excellent Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../2/26-本章小结.html">
+            
+                <a href="../2/26-本章小结.html">
+            
+                    
+                    2.6 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    第三章 Apache Flink 环境搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../3/Flink HelloWorld.html">
+            
+                <a href="../3/Flink HelloWorld.html">
+            
+                    
+                    3.1 Apache Flink HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../3/32-Flink 集群部署.html">
+            
+                <a href="../3/32-Flink 集群部署.html">
+            
+                    
+                    3.2 Apache Flink 集群部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../3/33-Flink Interactive Client.html">
+            
+                <a href="../3/33-Flink Interactive Client.html">
+            
+                    
+                    3.3 Apache Flink Interactive Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../3/34-本章小结.html">
+            
+                <a href="../3/34-本章小结.html">
+            
+                    
+                    3.4 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    第四章 Apache Flink SQL API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../4/41-sqlde-fa-zhan-ji-ying-yong.html">
+            
+                <a href="../4/41-sqlde-fa-zhan-ji-ying-yong.html">
+            
+                    
+                    4.1 SQL的发展及应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../4/42-SQL 数据类型.html">
+            
+                <a href="../4/42-SQL 数据类型.html">
+            
+                    
+                    4.2 Apache Flink SQL 数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../4/43-SQL Connector.html">
+            
+                <a href="../4/43-SQL Connector.html">
+            
+                    
+                    4.3 Apache Flink SQL Connector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../4/44-SQL 算子语义.html">
+            
+                <a href="../4/44-SQL 算子语义.html">
+            
+                    
+                    4.4 Apache Flink SQL 算子语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../4/45-SQL 算子实现原理.html">
+            
+                <a href="../4/45-SQL 算子实现原理.html">
+            
+                    
+                    4.5 Apache Flink SQL 算子实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../4/46-SQL 典型优化规则.html">
+            
+                <a href="../4/46-SQL 典型优化规则.html">
+            
+                    
+                    4.6 Apache Flink SQL 典型优化规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../4/47-aSQL 到 Runtime的转换.html">
+            
+                <a href="../4/47-aSQL 到 Runtime的转换.html">
+            
+                    
+                    4.7 Apache Flink SQL 到 Runtime的转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../4/48-SQL 综合实例.html">
+            
+                <a href="../4/48-SQL 综合实例.html">
+            
+                    
+                    4.8 Apache Flink SQL 综合实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../4/49-本章小结.html">
+            
+                <a href="../4/49-本章小结.html">
+            
+                    
+                    4.9 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    第五章 Apache Flink Table API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../5/51-TableAPI与SQL的区别.html">
+            
+                <a href="../5/51-TableAPI与SQL的区别.html">
+            
+                    
+                    5.1 Apache Flink TableAPI与SQL的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../5/52-TableAPI 对 SQL的扩展.html">
+            
+                <a href="../5/52-TableAPI 对 SQL的扩展.html">
+            
+                    
+                    5.2 Apache Flink TableAPI 对 SQL的扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../5/53-TableAPI 综合实例.html">
+            
+                <a href="../5/53-TableAPI 综合实例.html">
+            
+                    
+                    5.3 Apache Flink TableAPI 综合实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../5/54-本章小结.html">
+            
+                <a href="../5/54-本章小结.html">
+            
+                    
+                    5.4 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    第六章 Apache Flink DataStream API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.11.1" data-path="61-aDataStream API 与SQLTableAPI的区别.html">
+            
+                <a href="61-aDataStream API 与SQLTableAPI的区别.html">
+            
+                    
+                    6.1 Apache Flink DataStream API 与SQL/TableAPI的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="62-DataStream ProcessFunction.html">
+            
+                <a href="62-DataStream ProcessFunction.html">
+            
+                    
+                    6.2 Apache Flink DataStream ProcessFunction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="63-DataStream Iterate.html">
+            
+                <a href="63-DataStream Iterate.html">
+            
+                    
+                    6.3 Apache Flink DataStream Iterate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="64-DataStream 综合实例.html">
+            
+                <a href="64-DataStream 综合实例.html">
+            
+                    
+                    6.4 Apache Flink DataStream 综合实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="65-本章小结.html">
+            
+                <a href="65-本章小结.html">
+            
+                    
+                    6.5 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    第七章 Apache Flink DataSet API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../7/71-DataSet API与SQLTableAPI的区别.html">
+            
+                <a href="../7/71-DataSet API与SQLTableAPI的区别.html">
+            
+                    
+                    7.1 Apache Flink DataSet API与SQL/TableAPI的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../7/72-DataSet Iterate.html">
+            
+                <a href="../7/72-DataSet Iterate.html">
+            
+                    
+                    7.2 Apache Flink DataSet Iterate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../7/73-DataSet 综合实例.html">
+            
+                <a href="../7/73-DataSet 综合实例.html">
+            
+                    
+                    7.3 Apache Flink DataSet 综合实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../7/74-本章小结.html">
+            
+                <a href="../7/74-本章小结.html">
+            
+                    
+                    7.4 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    第八章 Apache Flink CEP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../8/81-CEP 简介.html">
+            
+                <a href="../8/81-CEP 简介.html">
+            
+                    
+                    8.1 Apache Flink CEP 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../8/82-CEP 算子语义.html">
+            
+                <a href="../8/82-CEP 算子语义.html">
+            
+                    
+                    8.2 Apache Flink CEP 算子语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../8/83-CEP on SQL.html">
+            
+                <a href="../8/83-CEP on SQL.html">
+            
+                    
+                    8.3 Apache Flink CEP on SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../8/84-CEP 综合实例.html">
+            
+                <a href="../8/84-CEP 综合实例.html">
+            
+                    
+                    8.4 Apache Flink CEP 综合实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../8/85-本章小结.html">
+            
+                <a href="../8/85-本章小结.html">
+            
+                    
+                    8.5 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    第九章 Apache Flink ML
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../9/91-ML 简介.html">
+            
+                <a href="../9/91-ML 简介.html">
+            
+                    
+                    9.1 Apache Flink ML 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../9/92-ML 核心接口.html">
+            
+                <a href="../9/92-ML 核心接口.html">
+            
+                    
+                    9.2 Apache Flink ML 核心接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../9/93-ML 核心算法.html">
+            
+                <a href="../9/93-ML 核心算法.html">
+            
+                    
+                    9.3 Apache Flink ML 核心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../9/94-ML on TableAPI.html">
+            
+                <a href="../9/94-ML on TableAPI.html">
+            
+                    
+                    9.4 Apache Flink ML on TableAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../9/95-ML 综合实例.html">
+            
+                <a href="../9/95-ML 综合实例.html">
+            
+                    
+                    9.5 Apache Flink ML 综合实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../9/96-本章小结.html">
+            
+                <a href="../9/96-本章小结.html">
+            
+                    
+                    9.6 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    第十章 Apache Flink Gelly
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../10/101-Gelly 简介.html">
+            
+                <a href="../10/101-Gelly 简介.html">
+            
+                    
+                    10.1 Apache Flink Gelly 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../10/102-Gelly 核心接口.html">
+            
+                <a href="../10/102-Gelly 核心接口.html">
+            
+                    
+                    10.2 Apache Flink Gelly 核心接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../10/103-Gelly 核心算法.html">
+            
+                <a href="../10/103-Gelly 核心算法.html">
+            
+                    
+                    10.3 Apache Flink Gelly 核心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../10/104-Gelly 综合实例.html">
+            
+                <a href="../10/104-Gelly 综合实例.html">
+            
+                    
+                    10.4 Apache Flink Gelly 综合实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../10/105-本章小结.html">
+            
+                <a href="../10/105-本章小结.html">
+            
+                    
+                    10.5 本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../本书总结.html">
+            
+                <a href="../本书总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.1 Apache Flink DataStream API 与SQL/TableAPI的区别</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="61-apache-flink-datastream-api-&#x4E0E;sqltableapi&#x7684;&#x533A;&#x522B;">6.1 Apache Flink DataStream API &#x4E0E;SQL/TableAPI&#x7684;&#x533A;&#x522B;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="62-DataStream ProcessFunction.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 6.2 Apache Flink DataStream ProcessFunction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.1 Apache Flink DataStream API 与SQL/TableAPI的区别","level":"1.11.1","depth":2,"next":{"title":"6.2 Apache Flink DataStream ProcessFunction","level":"1.11.2","depth":2,"path":"6/62-DataStream ProcessFunction.md","ref":"6/62-DataStream ProcessFunction.md","articles":[]},"previous":{"title":"第六章 Apache Flink DataStream API","level":"1.11","depth":1,"ref":"","articles":[{"title":"6.1 Apache Flink DataStream API 与SQL/TableAPI的区别","level":"1.11.1","depth":2,"path":"6/61-aDataStream API 与SQLTableAPI的区别.md","ref":"6/61-aDataStream API 与SQLTableAPI的区别.md","articles":[]},{"title":"6.2 Apache Flink DataStream ProcessFunction","level":"1.11.2","depth":2,"path":"6/62-DataStream ProcessFunction.md","ref":"6/62-DataStream ProcessFunction.md","articles":[]},{"title":"6.3 Apache Flink DataStream Iterate","level":"1.11.3","depth":2,"path":"6/63-DataStream Iterate.md","ref":"6/63-DataStream Iterate.md","articles":[]},{"title":"6.4 Apache Flink DataStream 综合实例","level":"1.11.4","depth":2,"path":"6/64-DataStream 综合实例.md","ref":"6/64-DataStream 综合实例.md","articles":[]},{"title":"6.5 本章小结","level":"1.11.5","depth":2,"path":"6/65-本章小结.md","ref":"6/65-本章小结.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"6/61-aDataStream API 与SQLTableAPI的区别.md","mtime":"2018-11-27T09:28:10.829Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-27T09:32:18.387Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
