@@ -37,4 +37,7 @@ out/
 tools/flink
 tools/flink-*
 tools/releasing/release
-_book/*
+_book
+_book/
+*book/
+?book

@@ -29,8 +29,6 @@ object FileUtils {
     val tmpWriter = new OutputStreamWriter(new FileOutputStream(tempFile), charset)
     tmpWriter.write(contents)
     tmpWriter.close()
-    val path = tempFile.getAbsolutePath
-    println(path)
-    path
+    tempFile.getAbsolutePath
   }
 }
