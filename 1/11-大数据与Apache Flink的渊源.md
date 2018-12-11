@@ -9,9 +9,7 @@
 
 ## 数据量与日俱增
 
-随着云计算、物联网、人工智能等信息技术的快速发展，数据量呈现几何级增长，我们先看一份预测数据，全球数据总量在短暂的10年时间会由16.1ZB增长到163ZB，数据量的快速增长已经远远超越单个计算机存储和处理能力，如下：
-
-![](/assets/import.png)
+随着云计算、物联网、人工智能等信息技术的快速发展，数据量呈现几何级增长，我们先看一份预测数据，全球数据总量在短暂的10年时间会由16.1ZB增长到163ZB，数据量的快速增长已经远远超越单个计算机存储和处理能力，如下：![](../assets/import.png)
 
 上图我们数据量的单位是ZB，我们简单介绍一下数据量的统计单位，基本单位是bit，按顺序给出所有单位：bit、Byte、KB、MB、GB、TB、PB、EB、ZB、YB、BB、NB、DB。他们之间的转换关系是：
 
@@ -28,24 +26,18 @@
 * 1 NB = 1,024 BB 
 * 1 DB = 1,024 NB 
 
-看到上面的数据量也许我们会质疑全球数据真的有这么恐怖吗？数据都从哪里来的呢? 其实我看到这个数据也深表质疑，但是仔细查阅了一下资料，发现全球数据的确在快速的增长着，比如 Fecebook社交平台每天有几百亿，上千亿的照片数据，纽约证券交易每天有几TB的交易数据，再说说刚刚发生的阿里巴巴2018年双11数据，从交易额上创造了2135亿的奇迹，从数据量上看仅仅是Alibaba内部的监控日志处理看就达到了162GB/秒。所以Alibaba为代表的互联网行业，也促使了数据量的急速增长，同样以Alibaba双11近10年来的成交额来用数字证明数据的增长，如下：
-
-![](/assets/alibaba11.png)
+看到上面的数据量也许我们会质疑全球数据真的有这么恐怖吗？数据都从哪里来的呢? 其实我看到这个数据也深表质疑，但是仔细查阅了一下资料，发现全球数据的确在快速的增长着，比如 Fecebook社交平台每天有几百亿，上千亿的照片数据，纽约证券交易每天有几TB的交易数据，再说说刚刚发生的阿里巴巴2018年双11数据，从交易额上创造了2135亿的奇迹，从数据量上看仅仅是Alibaba内部的监控日志处理看就达到了162GB/秒。所以Alibaba为代表的互联网行业，也促使了数据量的急速增长，同样以Alibaba双11近10年来的成交额来用数字证明数据的增长，如下：![](../assets/alibaba11.png)
 
 ## 大数据分析
 
 我们如何让大数据产生价值呢？毋庸置疑，对大数据进行统计分析，让那个统计分析的结果帮助我们进行决策。比如 推荐系统，我们可以根据一个用户长期的购买习惯，购买记录来分析其兴趣爱好，比如XXX（TODO）， 进而可以准确的进行有效推荐。那么面对上面的海量数据，在一台计算机上无法处理，那么我们如何在有限的时间内对全部数据进行统计分析呢？提及这个问题，我们不得不感谢Google发布的三大论文：
 
 * GFS - 2003年，Google发布Google File System论文，这是一个可扩展的分布式文件系统，用于大型的、分布式的、对大量数据进行访问的应用。
-* MapReduce - 2004年， Google发布了MapReduce论文，论文描述了大数据的分布式计算方式，主要思想是将任务分解然后在多台处理能力较弱的计算节点中同时处理，然后将结果合并从而完成大数据处理。Mapreduce是针对分布式并行计算的一套编程模型，如下图所示：
-
-![](/assets/MapReduce2.png)
+* MapReduce - 2004年， Google发布了MapReduce论文，论文描述了大数据的分布式计算方式，主要思想是将任务分解然后在多台处理能力较弱的计算节点中同时处理，然后将结果合并从而完成大数据处理。Mapreduce是针对分布式并行计算的一套编程模型，如下图所示：![](../assets/MapReduce2.png)
 
 * BigTable - 2006年, Google由发布了BigTable论文，是一款典型是NoSQL分布式数据库。
 
-受益于Google的三大论文，Apache开源社区迅速开发了Hadoop生态系统，HDFS，MapReduce编程模型，NoSQL数据库HBase。并很快得到了全球学术界和工业界的普遍关注，并得到推广和普及应用。其中Alibaba在2008年就启动了基于hadoop的云梯项目，hadoop就成为了Alibaba分布式计算的核心技术体系，并在2010年就达到了千台机器的集群，hadoop在Alibaba的集群发展如下：
-
-![](/assets/yunti.png)
+受益于Google的三大论文，Apache开源社区迅速开发了Hadoop生态系统，HDFS，MapReduce编程模型，NoSQL数据库HBase。并很快得到了全球学术界和工业界的普遍关注，并得到推广和普及应用。其中Alibaba在2008年就启动了基于hadoop的云梯项目，hadoop就成为了Alibaba分布式计算的核心技术体系，并在2010年就达到了千台机器的集群，hadoop在Alibaba的集群发展如下：![](../assets/yunti.png)
 
 但利用Hadoop进行MapReduce的开发，需要开发人员精通Java语言，并要对apReduce的运行原理有一定的了解，这样在一定程度上提高了MapReduce的开发门槛，所以在开源社区又不断涌现了一些为了简化MapReduce开发的开源框架，其中Hive就是典型的代表。HSQL可以让用户以类SQL的方式描述MapReduce计算，比如原本需要几十行，甚至上百行才能完成的wordCount，用户一条SQL语句就能完成了，这样极大的降低了MapReduce的开发门槛。这样Hadoop技术生态不断发展，基于Hadoop的分布式的大数据计算逐渐普及，在业界家喻户晓！
 
@@ -55,11 +47,11 @@
 
 # Flink 的发展历程
 
-Flink因分布式实时数据计算而产生，Flink以其优秀的纯流式计算架构很快于2014年3月成为Apache孵化器项目，2014年12月，Flink被接受为Apache顶级项目。随后社区非常活跃，Flink版本不断更新发布，截止到此刻\(2018.11.25\)社区已经发起了Flink-1.7.0的第三次后续发布版本的投票。Flink最初的项目名称是Stratosphere， Stratosphere是一个研究项目，其目标是开发下一代大数据分析平台。 Stratosphere对自己的定位和与Apache Flink的关系说明如下：![](/assets/stratosphere.png)![](/assets/Stratosphere2.png)
+Flink因分布式实时数据计算而产生，Flink以其优秀的纯流式计算架构很快于2014年3月成为Apache孵化器项目，2014年12月，Flink被接受为Apache顶级项目。随后社区非常活跃，Flink版本不断更新发布，截止到此刻\(2018.11.25\)社区已经发起了Flink-1.7.0的第三次后续发布版本的投票。Flink最初的项目名称是Stratosphere， Stratosphere是一个研究项目，其目标是开发下一代大数据分析平台。 Stratosphere对自己的定位和与Apache Flink的关系说明如下：![](../assets/stratosphere.png)![](../assets/Stratosphere2.png)
 
 接下来我们以一张鱼骨图介绍Flink的发展和发布历程：
 
-![](/assets/release.png)
+![](../assets/release.png)
 
 ## Stratosphere 0.5\(Flink base\)
 
@@ -114,14 +106,12 @@ Flink-1.6 发布了2个版本，在这个版本上面解决了360个issues。在
 ## Micro Batching 模式
 
 Micro-Batching 计算模式认为 "流是批的特例"， 流计算就是将连续不断的批进行持续计算，如果批足够小那么就有足够小的延时，在一定程度上满足了99%的实时计算场景。那么那1%为啥做不到呢?这就是架构的魅力，在Micro-Batching模式的架构实现上就有一个自然流数据流入系统进行攒批的过程，这在一定程度上就增加了延时。具体如下示意图：
-![](/assets/batch.png)
+![](../assets/batch.png)
 
 很显然Micro-Batching模式有其天生的低延时瓶颈，但任何事物的存在都有两面性，在大数据计算的发展历史上，最初Hadoop上的MapReduce就是优秀的批模式计算框架，Micro-Batching在设计和实现上可以借鉴很多成熟实践，客观来说Spark也是非常优秀的计算框架，这是毋庸置疑的。
 
 ## Native Streaming 模式
 
-Native Streaming 计算模式认为 ""批是流的特例"，这个认知更贴切流的概念，比如一些监控类的消息流，数据库操作的binlog，实时的支付交易信息等等自然流数据都是一条，一条的流入。Native Streaming 计算模式每条数据的到来都进行计算，这种计算模式显得更自然，并且延时性能达到更低。具体如下示意图：
-
-![](/assets/stream.png)
+Native Streaming 计算模式认为 ""批是流的特例"，这个认知更贴切流的概念，比如一些监控类的消息流，数据库操作的binlog，实时的支付交易信息等等自然流数据都是一条，一条的流入。Native Streaming 计算模式每条数据的到来都进行计算，这种计算模式显得更自然，并且延时性能达到更低。具体如下示意图：![](../assets/stream.png)
 
 很明显Native Streaming模式占据了流计算领域 "低延时" 的核心竞争力，当然Native Streaming模式的实现框架是一个历史先河，第一个实现Native Streaming模式的流计算框架是第一个吃螃蟹的人，需要面临更多的挑战，后续章节我们会慢慢介绍。当然Native Streaming模式的框架实现上面很容易实现Micro-Batching和Batching模式的计算，Apache Flink是Native Streaming计算模式的流批统一的计算引擎。

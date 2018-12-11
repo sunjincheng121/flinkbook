@@ -15,22 +15,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.flink.book.utils
 
-import java.io.{File, FileOutputStream, OutputStreamWriter}
+package org.apache.flink.book.ml
 
-object FileUtils {
-  def writeToTempFile(
-    contents: String,
-    filePrefix: String,
-    fileSuffix: String,
-    charset: String = "UTF-8"): String = {
-    val tempFile = File.createTempFile(filePrefix, fileSuffix)
-    val tmpWriter = new OutputStreamWriter(new FileOutputStream(tempFile), charset)
-    tmpWriter.write(contents)
-    tmpWriter.close()
-    val path = tempFile.getAbsolutePath
-    println(path)
-    path
+import org.apache.flink.api.scala._
+import org.apache.flink.api.scala.ExecutionEnvironment
+import org.apache.flink.ml.common.LabeledVector
+import org.apache.flink.ml.math.DenseVector
+
+object ETLLoadData {
+  def main(args: Array[String]): Unit = {
+    val env = ExecutionEnvironment.getExecutionEnvironment
+        // 加载测试数据
+        val survival = env.readCsvFile[(String, String, String, String)]("src/main/resources/haberman.data")
+        val survivalLV =
+          survival
+          .map { tuple =>
+            val list = tuple.productIterator.toList
+            val numList = list.map(_.asInstanceOf[String].toDouble)
+            LabeledVector(numList(3), DenseVector(numList.take(3).toArray))
+          }
   }
 }

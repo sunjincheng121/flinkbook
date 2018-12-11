@@ -21,7 +21,7 @@ package org.apache.flink.book.dataset
 import java.io.File
 
 import org.apache.flink.api.scala._
-import org.apache.flink.book.functions.FlatMapFunctions.{TokenizerFlatMap, WordsTokenizerFlatMap}
+import org.apache.flink.book.functions.FlatMapFunctions.WordsTokenizerFlatMap
 import org.apache.flink.book.utils.{CommonUtils, DataSetUtils}
 import org.apache.flink.core.fs.FileSystem.WriteMode
 
