@@ -56,8 +56,12 @@
     * [8.5 本章小结](8/85-本章小结.md)
 * 第九章 Apache Flink ML
     * [9.1 Apache Flink ML 简介](9/91-ML 简介.md)
-    * [9.2 Apache Flink ML 核心接口](9/92-ML 核心接口.md)
+    * [9.2 Apache Flink ML HelloWorld](9/92-MLHello World)
     * [9.3 Apache Flink ML 核心算法](9/93-ML 核心算法.md)
+      * [9.3.1 KNN](9/93-KNN.md)
+      * [9.3.2 SVM](9/93-SVM.md)
+      * [9.3.3 ALS](9/93-ALS.md)
+      * [9.3.4 Multiple linear regression](9/93-MLR.md)
     * [9.4 Apache Flink ML on TableAPI](9/94-ML on TableAPI.md)
     * [9.5 Apache Flink ML 综合实例](9/95-ML 综合实例.md)
     * [9.6 本章小结](9/96-本章小结.md)

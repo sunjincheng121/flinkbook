@@ -18,33 +18,39 @@
 
 package org.apache.flink.book.datastream
 
-import org.apache.flink.book.connectors.SourceFunctions
-import org.apache.flink.book.functions.FlatMapFunctions.TokenizerFlatMap
+import java.util.StringTokenizer
+
+import org.apache.flink.api.common.functions.FlatMapFunction
 import org.apache.flink.book.connectors.SinkFunctions.PrintSinkFunction
 import org.apache.flink.book.connectors.SourceFunctions.WordCountSourceFunction
 import org.apache.flink.streaming.api.scala._
+import org.apache.flink.util.Collector
 
 object WordCount {
   def main(args: Array[String]): Unit = {
-    // Streaming 环境
     val env = StreamExecutionEnvironment.getExecutionEnvironment
-    //方便我们查出输出数据
     env.setParallelism(1)
 
-    // 获得DataStream
     val dataStream = env.addSource(new WordCountSourceFunction)
-    // 分词
     val tokenizerWord = dataStream.flatMap(new TokenizerFlatMap)
-    //分组计数统计
     val result = tokenizerWord
-      // 初始化计数统计二元组
       .map{(_, 1)}
-      // 分组统计
       .keyBy(0)
       .sum(1)
 
-    // 将结果插入sink
     result.addSink(new PrintSinkFunction[(String, Int)])
     env.execute()
+  }
+
+  class TokenizerFlatMap extends FlatMapFunction[String, String] {
+    override def flatMap(
+      t: String,
+      out: Collector[String]): Unit = {
+      val stringTokenizer = new StringTokenizer(t, ",!' .;", false)
+      while(stringTokenizer.hasMoreElements()) {
+        val word = stringTokenizer.nextToken.trim.toLowerCase
+        out.collect(word)
+      }
+    }
   }
 }

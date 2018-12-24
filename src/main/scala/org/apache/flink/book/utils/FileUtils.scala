@@ -31,4 +31,7 @@ object FileUtils {
     tmpWriter.close()
     tempFile.getAbsolutePath
   }
+  def printFileContent(path: String): Unit ={
+    println(scala.io.Source.fromFile(path).mkString)
+  }
 }

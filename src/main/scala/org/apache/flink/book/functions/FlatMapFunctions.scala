@@ -24,7 +24,7 @@ import org.apache.flink.book.utils.DataSetUtils.Words
 import org.apache.flink.util.Collector
 
 object FlatMapFunctions {
-  class TokenizerFlatMap extends FlatMapFunction[String, String] {
+  class TokenizerFlatMap2 extends FlatMapFunction[String, String] {
     override def flatMap(
       t: String,
       out: Collector[String]): Unit = {
