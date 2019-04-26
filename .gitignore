@@ -1,4 +1,6 @@
 .cache
+pystudy/.tox/
+.tox
 scalastyle-output.xml
 .classpath
 .idea
