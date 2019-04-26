@@ -1,0 +1,8 @@
+setup.py
+module2/pyflink/app1.py
+module2/pyflink/app2.py
+pystudy.egg-info/PKG-INFO
+pystudy.egg-info/SOURCES.txt
+pystudy.egg-info/dependency_links.txt
+pystudy.egg-info/requires.txt
+pystudy.egg-info/top_level.txt

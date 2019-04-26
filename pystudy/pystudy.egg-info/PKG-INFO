@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pystudy
+Version: 0.1.0
+Summary: flink python table api
+Home-page: http://flink.apache.org
+Author: jincheng.sunjc
+Author-email: sunjincheng121@gmail.com
+License: Apache apache license 2.0
+Description: apache flink python table api
+Keywords: flink,table api
+Platform: any
